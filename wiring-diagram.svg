@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+<rect width="1100" height="760" fill="#f7fafc"/>
+<style>
+.title{font: bold 28px Arial;fill:#172554}.head{font:bold 18px Arial;fill:#fff}.label{font:15px Arial;fill:#172033}.small{font:13px Arial;fill:#334155}.box{fill:#fff;stroke:#94a3b8;stroke-width:2;rx:12}.wire{fill:none;stroke-width:3}
+</style>
+<text x="550" y="42" text-anchor="middle" class="title">Arduino Smart Radar — Wiring Diagram</text>
+<rect x="405" y="90" width="290" height="575" rx="18" fill="#2563eb" stroke="#1e3a8a" stroke-width="3"/>
+<text x="550" y="125" text-anchor="middle" class="head">ARDUINO UNO R3</text>
+<text x="550" y="148" text-anchor="middle" style="font:13px Arial;fill:#dbeafe">Digital pins and power</text>
+<g style="font:15px Arial;fill:#fff">
+<text x="430" y="190">D7</text><text x="430" y="225">D8</text><text x="430" y="260">D9</text><text x="430" y="295">D10</text><text x="430" y="330">D11</text><text x="430" y="365">D12</text><text x="430" y="400">D13</text>
+<text x="615" y="190">5V</text><text x="615" y="225">GND</text><text x="615" y="260">A4 / SDA</text><text x="615" y="295">A5 / SCL</text>
+</g>
+<!-- component boxes -->
+<rect class="box" x="40" y="170" width="270" height="145"/><text x="175" y="198" text-anchor="middle" class="title" style="font-size:20px">3 LEDs + resistors</text>
+<text x="60" y="228" class="label">Green anode → D9 through 220 Ω</text><text x="60" y="253" class="label">Yellow anode → D7 through 220 Ω</text><text x="60" y="278" class="label">Red anode → D8 through 220 Ω</text><text x="60" y="300" class="small">All LED cathodes → GND</text>
+<rect class="box" x="40" y="370" width="270" height="105"/><text x="175" y="400" text-anchor="middle" class="title" style="font-size:20px">HC-SR04 sensor</text><text x="60" y="430" class="label">TRIG → D10 · ECHO → D11</text><text x="60" y="455" class="label">VCC → 5V · GND → GND</text>
+<rect class="box" x="790" y="155" width="270" height="105"/><text x="925" y="185" text-anchor="middle" class="title" style="font-size:20px">Servo motor</text><text x="810" y="215" class="label">Signal → D12</text><text x="810" y="240" class="label">VCC → 5V* · GND → GND</text>
+<rect class="box" x="790" y="300" width="270" height="90"/><text x="925" y="330" text-anchor="middle" class="title" style="font-size:20px">Buzzer</text><text x="810" y="360" class="label">+ / signal → D13 · − → GND</text>
+<rect class="box" x="790" y="430" width="270" height="120"/><text x="925" y="460" text-anchor="middle" class="title" style="font-size:20px">16×2 I2C LCD</text><text x="810" y="490" class="label">SDA → A4 · SCL → A5</text><text x="810" y="515" class="label">VCC → 5V · GND → GND</text><text x="810" y="538" class="small">I2C address in code: 0x27</text>
+<!-- signal lines -->
+<path class="wire" stroke="#eab308" d="M310 215 H380 V190 H405"/><path class="wire" stroke="#ef4444" d="M310 240 H370 V225 H405"/><path class="wire" stroke="#22c55e" d="M310 265 H360 V260 H405"/>
+<path class="wire" stroke="#f97316" d="M310 420 H350 V295 H405"/><path class="wire" stroke="#a855f7" d="M310 440 H340 V330 H405"/>
+<path class="wire" stroke="#ec4899" d="M695 365 H750 V215 H790"/><path class="wire" stroke="#0ea5e9" d="M695 400 H760 V360 H790"/>
+<path class="wire" stroke="#14b8a6" d="M695 260 H735 V490 H790"/><path class="wire" stroke="#64748b" d="M695 295 H745 V515 H790"/>
+<rect x="40" y="585" width="1020" height="100" rx="12" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+<text x="60" y="615" class="title" style="font-size:18px">Important power and ground notes</text>
+<text x="60" y="642" class="label">• Connect every component's GND to the Arduino/common ground. The diagram shows signal paths; also connect 5V and GND as listed above.</text>
+<text x="60" y="665" class="label">• Use a 220 Ω resistor in series with each LED. If the servo causes resets or jitter, use a suitable separate regulated 5V supply and common ground.</text>
+<text x="550" y="725" text-anchor="middle" class="small">For reference, not to scale. Confirm the labels on your exact modules before powering them.</text>
+</svg>
