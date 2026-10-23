@@ -1,5 +1,9 @@
 # Arduino Smart Radar System
 
+![Arduino Smart Radar System overview](images/radar-system-overview.svg)
+
+An illustrated overview of the complete project and its live radar visualization. The artwork is a schematic illustration, not a photograph of the exact assembled circuit.
+
 An Arduino Uno R3 radar project that scans for nearby objects using an HC-SR04 ultrasonic sensor mounted on a servo motor. The system displays the scan in Processing on a computer and gives local distance feedback through three LEDs, a buzzer, and a 16×2 I2C LCD.
 
 ## Features
@@ -14,7 +18,11 @@ An Arduino Uno R3 radar project that scans for nearby objects using an HC-SR04 u
 - Shows distance and status on a 16×2 I2C LCD.
 - If the ultrasonic sensor receives no echo, the Arduino reports 999 cm (treated as out of range).
 
-## Components
+## Hardware Components
+
+![Illustrated hardware components](images/hardware-components.svg)
+
+The reference image labels the main parts used in this project. It is an illustration rather than a photo of the exact physical components.
 
 - Arduino Uno R3
 - HC-SR04 ultrasonic distance sensor
@@ -94,5 +102,7 @@ Example: `90,24.` means the sensor is pointing at 90° and measured an object 24
 - `arduino/Radar_System_Arduino.ino` — sensor scan, LEDs, buzzer, LCD, and serial output.
 - `processing/Radar_System_Processing.pde` — computer radar visualization.
 - `wiring-diagram.svg` — visual connection reference.
+- `images/radar-system-overview.svg` — project overview illustration.
+- `images/hardware-components.svg` — illustrated component identification guide.
 
 This is an educational prototype for learning embedded systems, sensors, serial communication, and visualisation. It is not a certified safety or security device.
