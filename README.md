@@ -29,7 +29,7 @@ An Arduino Uno R3 radar project that scans for nearby objects using an HC-SR04 u
 
 ## Wiring guide
 
-Open [wiring-diagram.svg](wiring-diagram.svg) for a visual wiring reference.
+Open [wiring-diagram.svg](wiring-diagram.svg) for a visual wiring reference, or view it below.\n\n![Arduino radar system wiring diagram](wiring-diagram.svg)
 
 | Component | Component pin | Arduino connection |
 |---|---|---|
